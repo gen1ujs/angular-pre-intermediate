@@ -43,4 +43,10 @@ export class ProductComponent{
     onDiv(){
         console.log('div clicked')
     }
+
+    keyup(email:string){
+        console.log(email)
+    }
+
+
 }
