@@ -1,13 +1,7 @@
-<div class="bg-primary text-white m-2 p-2">
-    {{model.getproducts().length}}
-</div>
-<div class="bg-primary text-white m-2 p-2">
-    <h2>{{product.name}}</h2>
-</div>
+<div [class]="getClasses(1)"><h1>{{model.getProductById(1).name}}</h1></div>
+<div [class]="getClasses(2)"><h1>{{model.getProductById(2).name}}</h1></div>
 
-<div class="bg-primary text-white m-2 p-2">
-    <h2 [textContent]="product.name"></h2>
-</div> 
+<button class="btn btn-primary" [class.disabled]="disabled">Submit</button>
 
-<img src="{{product.imageUrl}}">
-<img [src]="product.imageUrl">
+<div class="m-2 p-2" [ngClass]="getClassMap(1)"><h1>{{model.getProductById(1).name}}</h1></div>
+<div class="m-2 p-2" [ngClass]="getClassMap(2)"><h1>{{model.getProductById(2).name}}</h1></div>
