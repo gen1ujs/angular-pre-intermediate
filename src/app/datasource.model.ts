@@ -7,11 +7,11 @@ export class SimpleDataSource{
 
     constructor(){
         this.Products=new Array<Product>(
-            new Product(1,"Samsung S5","iyi telefon",1000),
-            new Product(2,"Samsung S6","iyi telefon",2000),
-            new Product(3,"Samsung S7","iyi telefon",3000),
-            new Product(4,"Samsung S8","iyi telefon",4000),
-            new Product(5,"Samsung S9","iyi telefon",5000),
+            new Product(1,"Samsung S5","iyi telefon",1000,"assets/img/1.jpg"),
+            new Product(2,"Samsung S6","iyi telefon",2000,"assets/img/2.jpg"),
+            new Product(3,"Samsung S7","iyi telefon",3000,"assets/img/3.jpg"),
+            new Product(4,"Samsung S8","iyi telefon",4000,"assets/img//4.jpg"),
+            new Product(5,"Samsung S9","iyi telefon",5000,"assets/img/5.jpg"),
         )
     }
 
