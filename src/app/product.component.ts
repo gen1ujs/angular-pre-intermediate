@@ -25,4 +25,14 @@ export class ProductComponent{
             "text-center text-white" : product.name === "Samsung S6"
         }
     }
+
+    color :string = "red"
+
+    getStyles(id:number):Object{
+        const product:Product=this.model.getProductById(id)
+        return {
+        fontSize:"25px",
+        color : "yellow"
+        }
+    }
 }

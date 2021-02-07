@@ -3,5 +3,10 @@
 
 <button class="btn btn-primary" [class.disabled]="disabled">Submit</button>
 
-<div class="m-2 p-2" [ngClass]="getClassMap(1)"><h1>{{model.getProductById(1).name}}</h1></div>
-<div class="m-2 p-2" [ngClass]="getClassMap(2)"><h1>{{model.getProductById(2).name}}</h1></div>
+<div class="m-2 p-2" [ngClass]="getClassMap(1)">
+    katalogdaki <span [style.color]="color">birinci ürün</span> {{model.getProductById(1).name}}
+</div>
+<div class="m-2 p-2" [ngClass]="getClassMap(2)">
+    katalogdaki <span [ngStyle]="getStyles(2)">ikinci ürün</span> {{model.getProductById(2).name}}
+
+</div>
