@@ -44,9 +44,10 @@ export class ProductComponent{
         console.log('div clicked')
     }
 
-    keyup(email:string){
-        console.log(email)
+
+    email:string = "omerfaruk@yesilyurt.com"
+
+    keyup(){
+        console.log(this.email)
     }
-
-
 }

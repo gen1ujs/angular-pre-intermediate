@@ -14,4 +14,7 @@
 
 <div (click)="onDiv()"><button type="submit" (click)="onSubmit($event)">Submit</button></div>
 <br>
-<input type="text" #email (keyup.enter) = "keyup(email.value)">
+<br>
+<input [(ngModel)]="email" (keyup.enter)="keyup()" type="text">
+<br>
+<span>{{email}}</span>
