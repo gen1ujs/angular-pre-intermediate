@@ -9,12 +9,12 @@ import {ProductRepository} from './repository.model'
 export class ProductComponent{
     model : ProductRepository = new ProductRepository()
     
-    disabled:boolean = true
+    disabled:boolean = false
     
 
     getClasses(id:number):string{
         const product:Product = this.model.getProductById(id)
-        return (product.price <=1000 ? "bg-info" : "bg-secondary") + " m-2 p-2"
+        return (product.price <=1000 ? "bg-primary" : "bg-secondary") + " m-2 p-2 text-white"
     }
 
     getClassMap(id:number):Object{
@@ -34,5 +34,13 @@ export class ProductComponent{
         fontSize:"25px",
         color : "yellow"
         }
+    }
+
+    onSubmit($event:any){
+        console.log('button clicked')
+        $event.stopPropagation()
+    }
+    onDiv(){
+        console.log('div clicked')
     }
 }

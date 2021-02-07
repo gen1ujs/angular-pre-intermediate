@@ -8,5 +8,8 @@
 </div>
 <div class="m-2 p-2" [ngClass]="getClassMap(2)">
     katalogdaki <span [ngStyle]="getStyles(2)">ikinci ürün</span> {{model.getProductById(2).name}}
-
 </div>
+
+
+
+<div (click)="onDiv()"><button type="submit" (click)="onSubmit($event)">Submit</button></div>
