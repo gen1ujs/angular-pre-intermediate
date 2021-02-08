@@ -1,20 +1,17 @@
-<div [class]="getClasses(1)"><h1>{{model.getProductById(1).name}}</h1></div>
-<div [class]="getClasses(2)"><h1>{{model.getProductById(2).name}}</h1></div>
-
-<button class="btn btn-primary" [class.disabled]="disabled">Submit</button>
-
-<div class="m-2 p-2" [ngClass]="getClassMap(1)">
-    katalogdaki <span [style.color]="color">birinci ürün</span> {{model.getProductById(1).name}}
-</div>
-<div class="m-2 p-2" [ngClass]="getClassMap(2)">
-    katalogdaki <span [ngStyle]="getStyles(2)">ikinci ürün</span> {{model.getProductById(2).name}}
+<div *ngIf="model.getproducts().length; then prodList else noProd">
+    
 </div>
 
+<ng-template #prodList>
+    <div class="bg-primary text-white m-2 p-2" >
+        There are {{model.getproducts().length}} products in the repository.
+    </div>
 
+</ng-template>
 
-<div (click)="onDiv()"><button type="submit" (click)="onSubmit($event)">Submit</button></div>
-<br>
-<br>
-<input [(ngModel)]="email" (keyup.enter)="keyup()" type="text">
-<br>
-<span>{{email}}</span>
+<ng-template #noProd>
+    <div class="bg-primary text-white m-2 p-2">
+        There are no products in the repository.
+    </div>
+
+</ng-template>
