@@ -1,0 +1,32 @@
+<ul>
+    <li [ngSwitch]="model.getproducts().length">
+    <p *ngSwitchCase="0">
+        There are 0 products
+    </p>
+    <p *ngSwitchCase="1">
+        There are 1 product
+    </p>
+    <p *ngSwitchDefault>
+    There are {{model.getproducts().length}}
+    </p>
+    
+    </li>
+</ul>
+<span>-----------------------------------------------------------</span>
+
+<ng-template [ngTemplateOutlet]="prodList" [ngTemplateOutletContext]="{products : model.getproducts()}"></ng-template>
+<ng-template [ngTemplateOutlet]="prodList" [ngTemplateOutletContext]="{products : model.getproducts() , categories: categoryAl()}"></ng-template>
+
+
+<ng-template #prodList let-products="products" let-categories="categories">
+    <div class="m-5">
+        <ul>
+            <li *ngFor="let product of products">
+                {{product.name}} <span *ngFor="let item of categories">{{item}}</span>
+            </li>
+        </ul>
+
+    </div>
+</ng-template>
+
+<input type="text" appEmailen>

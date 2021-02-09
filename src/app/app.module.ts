@@ -1,12 +1,14 @@
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
-import {ProductComponent} from './product.component'
+import {ProductComponent} from './product.component';
+import { EmailenDirective } from './emailen.directive'
 
 
 @NgModule({
   declarations: [
-    ProductComponent
+    ProductComponent,
+    EmailenDirective
   ],
   imports: [
     BrowserModule,

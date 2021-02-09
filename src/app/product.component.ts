@@ -9,5 +9,9 @@ import {ProductRepository} from './repository.model'
 export class ProductComponent{
     model : ProductRepository = new ProductRepository()
     
-   
+    categories:string[]=["phone"]
+
+    categoryAl():string[]{
+        return this.categories
+    }
 }
